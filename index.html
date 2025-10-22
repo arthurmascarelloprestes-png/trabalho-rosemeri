@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Minimalist Living: Produtos elegantes para casa e decoração. Descubra móveis, acessórios e decorações minimalistas.">
+    <meta name="keywords" content="casa, decoração, minimalista, móveis, acessórios">
+    <title>Minimalist Living - Casa e Decoração Elegante</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Minimalist Living</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#produtos">Produtos</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#contato">Contato</a></li>
+                <li><a href="#" id="carrinho-link">Carrinho (<span id="carrinho-count">0</span>)</a></li>
+            </ul>
+            <button id="theme-toggle" aria-label="Alternar tema"><i class="fas fa-sun"></i></button>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+        <div class="search-bar">
+            <input type="text" id="search-input" placeholder="Buscar produtos..." aria-label="Buscar produtos">
+            <button id="search-btn" aria-label="Buscar"><i class="fas fa-search"></i></button>
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <h1>Bem-vindo ao Minimalist Living</h1>
+        <p>Transforme seu espaço com elegância minimalista. Produtos de alta qualidade para uma vida simples e sofisticada.</p>
+        <div class="highlights">
+            <h2>Destaques</h2>
+            <div class="carousel" id="carousel">
+                <!-- Destaques serão inseridos via JS -->
+            </div>
+        </div>
+    </section>
+
+    <section id="produtos">
+        <h2>Catálogo de Produtos</h2>
+        <div class="filters">
+            <label for="categoria">Categoria:</label>
+            <select id="categoria" aria-label="Filtrar por categoria">
+                <option value="todos">Todos</option>
+                <option value="moveis">Móveis</option>
+                <option value="decoracao">Decoração</option>
+                <option value="acessorios">Acessórios</option>
+                <option value="iluminacao">Iluminação</option>
+            </select>
+            <label for="preco">Preço:</label>
+            <select id="preco" aria-label="Filtrar por preço">
+                <option value="todos">Todos</option>
+                <option value="baixo">Até R$ 200</option>
+                <option value="medio">R$ 201 - R$ 500</option>
+                <option value="alto">Acima de R$ 500</option>
+            </select>
+        </div>
+        <div id="product-grid" class="product-grid">
+            <!-- Produtos serão inseridos aqui via JavaScript -->
+        </div>
+    </section>
+
+    <section id="sobre">
+        <h2>Sobre Nós</h2>
+        <p>No Minimalist Living, acreditamos que o design minimalista cria harmonia e funcionalidade. Nossa missão é oferecer produtos que elevam o cotidiano, combinando qualidade, sustentabilidade e estética atemporal. Desde móveis ergonômicos até acessórios delicados, cada item é selecionado para promover uma vida equilibrada.</p>
+        <p>Fundada em 2020, nossa loja online atende apaixonados por design em todo o Brasil, com entrega rápida e suporte personalizado.</p>
+    </section>
+
+    <section id="contato">
+        <h2>Entre em Contato</h2>
+        <form id="contact-form">
+            <input type="text" placeholder="Nome" required aria-label="Nome">
+            <input type="email" placeholder="Email" required aria-label="Email">
+            <textarea placeholder="Mensagem" required aria-label="Mensagem"></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+        <p>Ou nos siga nas redes: <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a> <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a></p>
+    </section>
+
+    <div id="product-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" aria-label="Fechar modal">&times;</span>
+            <h3 id="modal-title"></h3>
+            <img id="modal-image" src="" alt="">
+            <p id="modal-description"></p>
+            <div class="rating" id="modal-rating"></div>
+            <p id="modal-price"></p>
+            <button id="add-to-cart-modal">Adicionar ao Carrinho</button>
+        </div>
+    </div>
+
+    <div id="cart-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" aria-label="Fechar carrinho">&times;</span>
+            <h3>Carrinho de Compras</h3>
+            <div id="cart-items"></div>
+            <p id="cart-total">Total: R$ 0</p>
+            <button id="checkout-btn">Finalizar Compra</button>
+        </div>
+    </div>
+
+    <div id="toast" class="toast"></div>
+
+    <footer>
+        <p>&copy; 2023 Minimalist Living. Todos os direitos reservados.</p>
+        <ul>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#contato">Contato</a></li>
+            <li><a href="#">Política de Privacidade</a></li>
+        </ul>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
