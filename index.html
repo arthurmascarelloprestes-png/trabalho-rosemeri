@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Minimalist Living: Produtos elegantes para casa e decoração. Descubra móveis, acessórios e decorações minimalistas.">
+    <meta name="keywords" content="casa, decoração, minimalista, móveis, acessórios">
+    <title>Minimalist Living - Casa e Decoração Elegante</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Minimalist Living</div>
+            <div class="nav-center">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="produtos.html">Produtos</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                    <li><a href="#" id="carrinho-link">Carrinho (<span id="carrinho-count">0</span>)</a></li>
+                </ul>
+            </div>
+            <button id="theme-toggle" aria-label="Alternar tema"><i class="fas fa-sun"></i></button>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+        <div class="search-bar">
+            <input type="text" id="search-input" placeholder="Buscar produtos..." aria-label="Buscar produtos">
+            <button id="search-btn" aria-label="Buscar"><i class="fas fa-search"></i></button>
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <h1>Bem-vindo ao Minimalist Living</h1>
+        <p>Transforme seu espaço com elegância minimalista. Produtos de alta qualidade para uma vida simples e sofisticada.</p>
+        <div class="highlights">
+            <h2>Destaques</h2>
+            <div class="carousel" id="carousel">
+                <!-- Destaques serão inseridos via JS -->
+            </div>
+        </div>
+    </section>
+
+    <div id="product-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" aria-label="Fechar modal">&times;</span>
+            <h3 id="modal-title"></h3>
+            <img id="modal-image" src="" alt="">
+            <p id="modal-description"></p>
+            <div class="rating" id="modal-rating"></div>
+            <p id="modal-price"></p>
+            <button id="add-to-cart-modal">Adicionar ao Carrinho</button>
+        </div>
+    </div>
+
+    <div id="cart-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" aria-label="Fechar carrinho">&times;</span>
+            <h3>Carrinho de Compras</h3>
+            <div id="cart-items"></div>
+            <p id="cart-total">Total: R$ 0</p>
+            <button id="checkout-btn">Finalizar Compra</button>
+        </div>
+    </div>
+
+    <div id="toast" class="toast"></div>
+
+    <footer>
+        <p>&copy; 2023 Minimalist Living. Todos os direitos reservados.</p>
+        <ul>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="contato.html">Contato</a></li>
+            <li><a href="#">Política de Privacidade</a></li>
+        </ul>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
