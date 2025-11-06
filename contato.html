@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Entre em contato com Minimalist Living para dúvidas sobre produtos e decoração minimalista.">
+    <meta name="keywords" content="contato, minimalista, decoração, casa">
+    <title>Contato - Minimalist Living</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Minimalist Living</div>
+            <div class="nav-center">
+                <ul class="nav-links">
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/produtos.html">Produtos</a></li>
+                    <li><a href="/sobre.html">Sobre</a></li>
+                    <li><a href="/contato.html">Contato</a></li>
+                    <li><a href="#" id="carrinho-link">Carrinho (<span id="carrinho-count">0</span>)</a></li>
+                </ul>
+            </div>
+            <button id="theme-toggle" aria-label="Alternar tema"><i class="fas fa-sun"></i></button>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+        <!-- Barra de pesquisa removida aqui -->
+    </header>
+
+    <section id="contato" class="contact">
+        <h1>Entre em Contato</h1>
+        <p>Tem dúvidas sobre nossos produtos minimalistas? Entre em contato conosco!</p>
+        <div class="contact-container">
+            <div class="contact-form">
+                <form id="contact-form">
+                    <label for="name">Nome:</label>
+                    <input type="text" id="name" name="name" required>
+                    
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" required>
+                    
+                    <label for="message">Mensagem:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                    
+                    <button type="submit">Enviar Mensagem</button>
+                </form>
+            </div>
+            <div class="contact-info">
+                <h2>Informações de Contato</h2>
+                <p><i class="fas fa-phone"></i> (11) 1234-5678</p>
+                <p><i class="fas fa-envelope"></i> contato@minimalistliving.com</p>
+                <p><i class="fas fa-map-marker-alt"></i> Rua Minimalista, 123 - São Paulo, SP</p>
+                <div id="map" class="map-placeholder">
+                    <!-- Placeholder para mapa (integrar com Google Maps via JS) -->
+                    <p>Mapa interativo aqui</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="product-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" aria-label="Fechar modal">&times;</span>
+            <h3 id="modal-title"></h3>
+            <img id="modal-image" src="" alt="">
+            <p id="modal-description"></p>
+            <div class="rating" id="modal-rating"></div>
+            <p id="modal-price"></p>
+            <button id="add-to-cart-modal">Adicionar ao Carrinho</button>
+        </div>
+    </div>
+
+    <div id="cart-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" aria-label="Fechar carrinho">&times;</span>
+            <h3>Carrinho de Compras</h3>
+            <div id="cart-items"></div>
+            <p id="cart-total">Total: R$ 0</p>
+            <button id="checkout-btn">Finalizar Compra</button>
+        </div>
+    </div>
+
+    <div id="toast" class="toast"></div>
+
+    <footer>
+        <p>&copy; 2023 Minimalist Living. Todos os direitos reservados.</p>
+        <ul>
+            <li><a href="/sobre.html">Sobre</a></li>
+            <li><a href="/contato.html">Contato</a></li>
+            <li><a href="#">Política de Privacidade</a></li>
+        </ul>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
